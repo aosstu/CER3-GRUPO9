@@ -1,0 +1,45 @@
+#t1,#t2{
+    text-align: center;
+    color:white;
+    font-family: "Quicksand", sans-serif ;
+    font-size:5rem;
+}
+
+#logo{
+    border-radius: 50%;
+    background-color: aliceblue;
+    width: 20vw;
+    height: 35vh;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+    
+}
+
+#con1 {
+    display: inline-block;
+    background-color: #0c4ae8;
+    
+    width: 50vw;
+    height:100vh;
+}
+
+#con2{
+    float: right;
+    background-color: white;
+    width: 47vw;
+    
+}
+
+.card-text {
+    text-align: justify;
+}
+
+#logoNavbar{
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+h2,h6,td,tr{
+    text-align: center;
+}

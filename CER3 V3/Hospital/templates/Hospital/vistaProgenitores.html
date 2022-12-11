@@ -1,0 +1,30 @@
+{%  extends 'Hospital/base.html' %}
+{% load static %}
+
+{% block title %} MIS AVANCES NEO {% endblock %}
+
+
+{% block content %}
+      <div class="container">
+          <div class="col">
+          {% for i in bebes %}
+            <div class="card" style="width: 20rem;">
+              <div class="card-body">
+                <h5 class="card-title text-center">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted text-center">Card subtitle</h6>
+                <p class="card-text"> 
+                  Nombre: {{i.nombre}}
+                  <br>
+                  Apellido Paterno: {{i.apellido_paterno}}
+
+                </p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}

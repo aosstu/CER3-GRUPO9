@@ -1,0 +1,37 @@
+{%  extends 'Hospital/base.html' %}
+{% load static %}
+
+{% block title %} MIS AVANCES NEO {% endblock %}
+
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Listado de Avances</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Orina</th>
+                            <th>Deposiciones</th>
+                            <th>Unidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in Avances %}
+                        <tr>
+                            <td>{{i.bebe}}</td>
+                            <td>{{i.orina}}</td>
+                            <td>{{i.deposiciones}}</td>
+                            <td>{{i.unidad}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
