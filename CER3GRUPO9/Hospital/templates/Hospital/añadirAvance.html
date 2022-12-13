@@ -1,0 +1,26 @@
+{%  extends 'Hospital/base.html' %}
+{% load static %}
+
+{% block title %} MIS AVANCES NEO {% endblock %}
+
+
+{% block content %}    
+    <div class="row" style="margin-left: 0px; margin-right: 0px;">
+        <div class="col-12 col-md-5 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2> Añadir Avance Diario</h2>
+                    <form action="" class="formulario_avance" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <div class="d-flex justify-content-end">
+                            <input type="reset" value="Cancelar" class="btn btn-secondary">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
