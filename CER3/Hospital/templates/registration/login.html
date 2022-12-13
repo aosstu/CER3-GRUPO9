@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Hospital/css/custom.css' %}">
+</head>
+<body>
+    <div class="container-fluid" id="con1">
+        <div class="row">
+            {% load static %}
+            <img src="{% static 'Hospital/img/logomain.png'%}" alt="hola" id="logo">
+            <h1 id="t1">Hospital</h1>
+            <br>
+            <h1 id="t2">Dr.Gustavo Fricke</h1>
+        </div>
+    </div>
+    <div class="container-fluid" id="con2" >
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">            
+                        <h2>Ingreso</h2>
+                        <hr>               
+                        <form action="" method="post" >
+
+                            {% csrf_token %}
+                            {{ form }}
+                            
+                            <input type="submit" value="ingresar">
+                        </form>
+                        <a href="{% url 'admin:index' %}">Sitio web de Administradores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{%  extends 'Hospital/base.html' %}
+{% load static %}
+
+{% block title %} MIS AVANCES NEO {% endblock %}
+
+
+{% block content %}
+{% for i in bebes %}
+  <div class="card border-warning mb-3" style="max-width: 18rem;">
+    <div class="card-body">
+      <p class="card-text">
+        Nombre: {{ i.nombre }}<br>
+        Apellido Paterno: {{ i.apellido_paterno }}<br>
+        Apellido Materno: {{ i.apellido_materno }}
+      </p>
+      <a href="{% url 'verAvances' %}" class="btn btn-primary" >Ver Avances</a>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
